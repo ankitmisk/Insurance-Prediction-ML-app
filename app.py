@@ -72,9 +72,12 @@ if st.button("Click to Predict: "):
   with st.spinner("Predicting.."):
     import time
     time.sleep(2)
-  final_ans = model.predict(all_ans)[0]
+  final_ans = model.predict([all_ans])[0]
   if final_ans == 0:
     st.info("❎Customer will not Buy the Insurance❎")
   else:
     st.success("✅Customer will buy the Insurance✅")
 
+
+# changes 1: dict
+# changes 2: model predict
