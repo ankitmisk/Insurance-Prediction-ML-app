@@ -23,6 +23,7 @@ url = "https://raw.githubusercontent.com/ankitmisk/UIT-data/refs/heads/main/Insu
 df = pd.read_csv(url)
 
 # Step 3: EDA: Exploratory Data Analysis
+df.drop("Customer_ID", axis = 1, inplace = True)
 
 df['Previous_Insurance'] = df['Previous_Insurance'].map({'No':0,"Yes":1})
 df['Insurance_Bought'] = df['Insurance_Bought'].map({'No':0,"Yes":1})
