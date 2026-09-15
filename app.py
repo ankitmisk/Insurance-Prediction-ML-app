@@ -63,7 +63,7 @@ for index, col_name in enumerate(X.columns):
 
   all_ans.append(value)
 
-ud = {j:all_ans[i] for i,j in enumerate(x.columns)}
+ud = {j:all_ans[i] for i,j in enumerate(X.columns)}
 user_df = pd.DataFrame(ud)
 st.write(user_df)
 
